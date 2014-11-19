@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Polymer WebApp</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild-->
+
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <!-- build:vulcanized elements/elements.vulcanized.html -->
+    <link rel="import" href="imports.html">
+    <!-- endbuild-->
+</head>
+
+<body unresolved fullbleed layout vertical>
+
+    <core-header-panel flex>
+        <core-toolbar>
+            <core-icon-button icon="menu" on-tap="{{menuAction}}"></core-icon-button>
+            <div flex>PolymerIDE</div>
+            <core-icon-button icon="more" on-tap="{{moreAction}}"></core-icon-button>
+
+        </core-toolbar>
+
+
+        <code-mirror mode="text/html" theme="cobalt">
+
+            <polymer-element name="proto-element">
+              <template>
+                <span>I'm <b>proto-element</b>. Check out my prototype.</span>
+              </template>
+              <script>
+                Polymer({
+                  ready: function() {
+                    //...
+                  }
+                });
+              </script>
+            </polymer-element>
+
+
+
+
+        </code-mirror>
+
+    </core-header-panel>
+
+    <!-- build:js scripts/app.js -->
+    <script src="scripts/app.js"></script>
+    <!-- endbuild-->
+</body>
+
+</html>
